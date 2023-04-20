@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "esbuild src/index.tsx --bundle --minify --sourcemap --outfile=public/bundle.js",
+    "build": "esbuild src/index.tsx --bundle --minify --sourcemap --outfile=public/bundle.js && npm run minify-html",
+    "minify-html": "html-minifier -- collapse-whitespace --remove-comments --input-dir=public--output-dir=dist",
+    "deploy": "gh-pages -d dist",
     "build:dev": "node esbuild.dev.js",
     "start": "node esbuild.config.js -w",
     "open": "start public/index.html"
@@ -22,5 +24,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.0.4"
-  }
+  },
+  "type":"module"
 }

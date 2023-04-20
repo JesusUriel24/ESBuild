@@ -4,7 +4,7 @@ const App = (props: { message: string}) => {
     const [count, setCount] = useState(0);
 
     const increment = useCallback(() => {
-        setCount((count) => +1);
+        setCount((count) => + 1);
     }, [count]);
 
     return(
