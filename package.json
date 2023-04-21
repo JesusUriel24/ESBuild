@@ -16,7 +16,8 @@
   "devDependencies": {
     "esbuild": "^0.17.17",
     "esbuild-serve": "^1.0.1",
-    "gh": "^2.8.9"
+    "gh": "^1.13.9",
+    "gh-pages": "^5.0.0"
   },
   "dependencies": {
     "@types/react": "^18.0.37",
